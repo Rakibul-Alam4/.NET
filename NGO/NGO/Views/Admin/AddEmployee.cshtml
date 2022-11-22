@@ -1,0 +1,24 @@
+﻿@model IEnumerable<NGO.DB.Food>
+@{
+    ViewBag.Title = "AddEmployee";
+}
+
+
+<h2>AddEmployee</h2>
+@if (Session["cart"] != null)
+{
+    @*foreach (var cart in (List<NGO.DB.Food>)Session["cart"])*@
+    foreach (var cart in Model)
+    {
+
+        <form action="" method="POST">
+
+            <input type="text" name="Fname" value="@cart.Fname" placeholder=" Name" class="form-control" />
+            <input type="text" name="Date" value="@cart.Date" placeholder="Date" class="form-control" />
+            <input type="text" name="ResturantName" value="@cart.ResturantName" placeholder="Resturant" class="form-control" />
+            <input type="text" name="Location" value="@cart.Location" placeholder="Location" class="form-control" />
+            <input type="text" name="Quantity" value="@cart.Quantity" placeholder="Quantity" class="form-control" />
+            <input type="submit" value="Add Employee" class="btn-primary" />
+        </form>
+    }
+}

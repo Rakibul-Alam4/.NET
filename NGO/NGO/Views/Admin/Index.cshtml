@@ -1,0 +1,41 @@
+﻿
+@{
+    Layout = null;
+}
+
+<!DOCTYPE html>
+
+<html>
+<head>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-Zenh87qX5JnK2Jl0vWa8Ck2rdkQ2Bzep5IDxbcnCeuOxjzrPF/et3URy9Bv1WTRi" crossorigin="anonymous">
+    <link href="~/Content/StyleSheet1.css" rel="stylesheet" />
+    <meta name="viewport" content="width=device-width" />
+    <title>Index</title>
+</head>
+<body>
+    <section class="navbar navbar-fixed-top ">
+
+        <div>
+            <a class="active" href="/Home/Index">Home</a>
+            <a href="/Home/Contact">Contact</a>
+            <a href="/Home/About">About</a>
+            <a href="/Home/Login">Admin Login</a>
+            <a href="/Home/Login">Donar Login</a>
+        </div>
+        <div class="navbar-btn top-right">
+            <input class="" type="submit" value="Admin LogOut" onclick="location.href='@Url.Action("LogOut", "Home")'" />
+
+        </div>
+
+
+    </section>
+    <form action="" method="post">
+        <div class=" btn-group-vertical">
+            <h4>Admin</h4><br />
+            <a class="btn btn-success btn-lg" href="/Admin/List">Food List</a><br />
+            <a class="btn btn-success btn-lg" href="#">Status</a>
+
+        </div>
+    </form>
+</body>
+</html>

@@ -1,0 +1,43 @@
+﻿
+@{
+    ViewBag.Title = "List";
+}
+
+<h2>List</h2>
+<a href="/Admin/Index" class="btn btn-info ">Back</a>
+<a href="/Admin/Cart" class="btn btn-info ">My Cart</a>
+<div>
+    <table class="table">
+
+        <thead>
+            <tr>
+                <td>id</td>
+                <td>Food</td>
+                <td>Date</td>
+                <td>Resturant name</td>
+                <td>Location</td>
+                <td>Quantity</td>
+                
+            </tr>
+        </thead>
+        @foreach (var it in Model)
+        {
+            <tr>
+                <td>@it.id</td>
+                <td>@it.Fname</td>
+                <td>@it.Date</td>
+                <td>@it.ResturantName</td>
+                <td>@it.Location</td>
+                <td>@it.Quantity</td>
+                <td>
+                    <a href="/Admin/AddToCart/@it.id" class="btn btn-success "><i class="bi-pencil-square"></i>Add to cart</a>
+
+
+                </td>
+
+
+            </tr>
+        }
+
+    </table>
+</div>
